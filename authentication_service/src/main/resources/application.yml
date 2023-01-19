@@ -1,0 +1,25 @@
+
+
+server:
+  port: 8082
+  
+debug: true
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: sys as sysdba
+    password: admin@123
+   
+  jpa:
+    properties:
+      hibernate:
+        dialect = org.hibernate.dialect.Oracle12cDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+ 
+
+      
