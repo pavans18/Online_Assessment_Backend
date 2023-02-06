@@ -9,7 +9,8 @@ import lombok.Data;
 public class Result {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "ID")
 	private int id;
 
 	@Column(name = "result_status")
@@ -19,7 +20,7 @@ public class Result {
 	private String score;
 
 	@Column(name = "exam_date")
-	private String edate;
+	private String examDate;
 
 	@Column(name = "total_marks")
 	private String totalMarks;
@@ -28,8 +29,8 @@ public class Result {
 	private String totalQuestion;
 
 	@ManyToOne
-	@JoinColumn(name = "_name")
-	private Subject sname;
+	@JoinColumn(name = "subject_name")
+	private Subject subName;
 
 	@ManyToOne
 	// @JoinColumn(name= "user_email")

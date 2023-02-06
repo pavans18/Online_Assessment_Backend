@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.test.entity.Question;
+import com.test.exception.QuestionNotFoundException;
 import com.test.repository.QuestionRepository;
 
 
@@ -20,6 +21,9 @@ public class QuestionServiceImpl implements QuestionService {
 
 	@Override
 	public Question addQuestion(Question question) {
+		if(question.getQname().equals("") || question.getAnswer().equals("")) {
+			throw new QuestionNotFoundException("Question Fields are required");
+		}
 		return queRepo.save(question);
 	}
 
@@ -30,6 +34,7 @@ public class QuestionServiceImpl implements QuestionService {
 
 	@Override
 	public Question editQuestionById(int id, Question question) {
+		
 		question.setId(id);
 		return queRepo.save(question);
 			

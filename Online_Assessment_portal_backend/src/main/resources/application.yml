@@ -2,10 +2,10 @@ debug: true
 
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/xe
-    driver-class-name: oracle.jdbc.OracleDriver
-    username: sys as sysdba
-    password: admin@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oap_db
+    username: root
+    password: Root@123
 
   jpa:
     show-sql: true

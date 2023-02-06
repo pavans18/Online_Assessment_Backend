@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.test.entity.Exam;
+import com.test.exception.ExamNotFoundException;
 import com.test.exception.NotFoundException;
 import com.test.repository.ExamRepository;
 import com.test.service.ExamService;
@@ -41,9 +42,9 @@ public class ExamController {
 	@PostMapping("/addExam")
 	public ResponseEntity<?> addExam(@RequestBody Exam exam) {
 		if(exam.getMarks().equals("") || exam.getTotalQuestion().equals("")) {
-			throw new NotFoundException("Exam name is required");
+			throw new ExamNotFoundException("Exam name is required" + exam );
 		}
-		Exam examCreated = service.addNewExam(exam);
+		Exam examCreated = service.addNewExam(exam); 
 		return ResponseEntity.status(HttpStatus.CREATED).body(examCreated);
 	}
 

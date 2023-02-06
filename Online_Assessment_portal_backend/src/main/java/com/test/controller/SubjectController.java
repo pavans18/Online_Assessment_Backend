@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.test.entity.Subject;
 import com.test.exception.NotFoundException;
+import com.test.exception.SubjectNotFoundException;
 import com.test.repository.SubjectRepository;
 import com.test.service.SubjectService;
 
@@ -56,11 +57,12 @@ public class SubjectController {
 	// Add Subject
 	@PostMapping("/addSubject")
 	public ResponseEntity<?> addNewSubject(@RequestBody Subject subject) {
+		
 		if(subject.getName().equals("")) {
-			throw new NotFoundException("Subject Name is Required");
+			throw new NotFoundException("Subject Name is Required" + subject);
 		}
 		Subject addSubject = subjectService.addSubject(subject);
 		return ResponseEntity.status(HttpStatus.CREATED).body(addSubject);
-
-	}
+	
+}
 }

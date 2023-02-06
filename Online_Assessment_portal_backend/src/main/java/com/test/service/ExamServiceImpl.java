@@ -22,6 +22,9 @@ public class ExamServiceImpl implements ExamService {
 	
 	@Override
 	public Exam addNewExam(Exam exam) {
+		if(exam.getMarks().equals("") || exam.getTotalQuestion().equals("")) {
+			throw new ExamNotFoundException("Exam Name is required");
+		}
 		return examRepo.save(exam);
 	}
 
