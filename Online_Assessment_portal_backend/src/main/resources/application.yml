@@ -1,0 +1,17 @@
+debug: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oap_db
+    username: root
+    password: Root@123
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+     
+server:
+  port:  8005
+  
