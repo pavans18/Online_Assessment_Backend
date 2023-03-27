@@ -1,0 +1,148 @@
+ #displayHeadingBox h2 {
+   margin-left: 10px;
+   font-size: 30px;
+ }
+
+
+ /* -------------------------------------------------------------------------------- */
+
+
+ #tableBox {
+   /* background-color: cyan; */
+   width: 1050px;
+   float: left;
+   margin-left: 10px;
+   font-size: 20px;
+ }
+
+ table {
+   width: 100%;
+   border-collapse: collapse;
+
+ }
+
+ table,
+ tr,
+ td,
+ th {
+   border: 1.5px solid rgba(0, 0, 0);
+ }
+
+ #center {
+   text-align: center;
+ }
+
+ tr {
+   text-align: center;
+ }
+
+ th {
+   height: 35px;
+ }
+
+ tr td button {
+   color: white;
+   background-color: #008CBA;
+   height: 35px;
+   min-width: 90px;
+   border-radius: 7px;
+ }
+
+ tr td button:hover {
+   background-color: rgba(48, 142, 219, 0.767);
+ }
+
+ /* tr:hover {
+   background-color: rgba(203, 210, 218, 0.945);
+ } */
+
+ #addSubjectBox {
+   /* background-color: yellow; */
+   float: left;
+   width: 100px;
+   margin-left: 10px;
+   margin-top: 10px;
+ }
+
+
+ #addSubjectBox button {
+   height: 30px;
+   color: #fff;
+   background-color: #9c6258;
+   border-color: #ccb2b280;
+   border-radius: .25rem;
+   cursor: pointer;
+ }
+
+
+ #addSubjectBox button:hover {
+   background-color: #b18d70;
+ }
+
+ /* ---------------------------------------------------------------------------------- */
+
+ /* Add Subject css */
+
+
+ #addBox {
+   margin-top: 50px;
+   margin-left: 10px;
+
+   /* background-color: yellow; */
+   float: left;
+   width: 1050px;
+   min-height: 150px;
+   float: left;
+   /* display:none; */
+
+ }
+
+ /* #buttonBox{
+        
+} */
+
+ #addBox button {
+   margin-top: 10px;
+   height: 30px;
+   color: #fff;
+   background-color: #28a745;
+   border-color: #28a745;
+   border-radius: .25rem;
+   cursor: pointer;
+   margin-left: 10px;
+   min-width: 50px;
+ }
+
+ #addBox button:hover {
+   background-color: #0c4d1b;
+ }
+
+
+
+ #addBox input {
+   margin-top: 20px;
+   width: 800px;
+   height: 25px;
+   padding: 6px 12px;
+   font-size: 16px;
+   line-height: 1.42857143;
+   color: rgb(82, 81, 81);
+   background-color: #fff;
+   background-image: none;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
+
+
+ #addBox label {
+   display: inline-block;
+   margin-right: 40px;
+   font-size: 18px;
+
+ }
+
+
+
+ .addQuestion {
+   margin-top: 0px !important;
+ }
